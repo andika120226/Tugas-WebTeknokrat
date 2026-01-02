@@ -3,6 +3,7 @@
 ## ✅ Status Saat Ini
 
 Repository Git sudah diinisialisasi dan terhubung ke:
+
 ```
 https://github.com/andika120226/Tugas-WebTeknokrat.git
 ```
@@ -58,6 +59,7 @@ git push origin main
 ## 📋 Perintah Git yang Berguna
 
 ### Melihat Status
+
 ```bash
 # Lihat file yang dimodifikasi
 git status
@@ -73,6 +75,7 @@ git diff
 ```
 
 ### Mengelola Remote
+
 ```bash
 # Lihat remote yang terhubung
 git remote -v
@@ -85,6 +88,7 @@ git remote remove origin
 ```
 
 ### Branch Management
+
 ```bash
 # Lihat semua branch
 git branch
@@ -103,6 +107,7 @@ git merge <nama-branch>
 ```
 
 ### Undo Changes
+
 ```bash
 # Undo perubahan pada file (sebelum add)
 git checkout -- <namafile>
@@ -151,6 +156,7 @@ git branch -d feature/new-page
 ## 🔍 Melihat Project di GitHub
 
 Setelah push berhasil, akses:
+
 ```
 https://github.com/andika120226/Tugas-WebTeknokrat
 ```
@@ -170,12 +176,14 @@ cd Tugas-WebTeknokrat
 ## 🚨 Troubleshooting
 
 ### Problem: Remote already exists
+
 ```bash
 git remote remove origin
 git remote add origin <URL>
 ```
 
 ### Problem: Push rejected
+
 ```bash
 # Pull dulu sebelum push
 git pull origin main --rebase
@@ -183,6 +191,7 @@ git push origin main
 ```
 
 ### Problem: Merge conflict
+
 ```bash
 # Edit file yang conflict
 # Hapus marker <<<<, ====, >>>>
@@ -192,6 +201,7 @@ git push origin main
 ```
 
 ### Problem: File terlalu besar
+
 ```bash
 # Tambahkan ke .gitignore
 echo "file-besar.zip" >> .gitignore
@@ -203,40 +213,49 @@ git push origin main
 ## 📝 Best Practices
 
 ### Commit Messages
+
 ✅ **Good:**
+
 - "Add footer section to home page"
 - "Fix responsive navbar on mobile"
 - "Update hero banner background"
 
 ❌ **Bad:**
+
 - "update"
 - "fix"
 - "asdfgh"
 
 ### Commit Frequency
+
 - Commit setiap kali menyelesaikan satu fitur/perbaikan
 - Jangan commit terlalu jarang (kehilangan history)
 - Jangan commit terlalu sering (history berantakan)
 
 ### .gitignore
+
 Sudah dibuat file `.gitignore` untuk mengabaikan:
+
 - IDE folders (.vscode, .idea)
 - OS files (Thumbs.db, .DS_Store)
-- Temporary files (*.tmp, *.log)
+- Temporary files (_.tmp, _.log)
 - Node modules (jika ada)
 
 ## 🎯 Next Steps
 
 1. ✅ **Verifikasi Upload**
+
    - Buka https://github.com/andika120226/Tugas-WebTeknokrat
    - Pastikan semua file terupload
 
 2. ✅ **Update README**
+
    - Edit README.md di GitHub
    - Tambahkan screenshot
    - Tambahkan demo link (jika di-deploy)
 
 3. ✅ **Enable GitHub Pages** (Optional)
+
    - Settings → Pages
    - Source: Deploy from branch → main
    - Folder: / (root) atau /html
@@ -253,6 +272,7 @@ Sudah dibuat file `.gitignore` untuk mengabaikan:
 Untuk membuat website live:
 
 1. **Via GitHub Website:**
+
    - Masuk ke repository
    - Settings → Pages
    - Source: main branch
@@ -260,6 +280,7 @@ Untuk membuat website live:
    - Save
 
 2. **Update index.html di root:**
+
 ```bash
 # Copy Home.html ke root sebagai index.html
 cp html/Home.html index.html
@@ -271,6 +292,7 @@ cp html/Home.html index.html
 ## 📞 Support
 
 Jika ada masalah:
+
 1. Cek dokumentasi Git: https://git-scm.com/doc
 2. GitHub Docs: https://docs.github.com/
 3. Stack Overflow: https://stackoverflow.com/questions/tagged/git
@@ -279,4 +301,4 @@ Jika ada masalah:
 
 **Happy Coding! 🚀**
 
-*Last Updated: 2 Januari 2026*
+_Last Updated: 2 Januari 2026_
