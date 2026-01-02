@@ -79,15 +79,19 @@ body {
 /* Hero Section */
 .hero-scholarship {
   position: relative;
-  height: 500px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../Kumpulan foto/SnapInsta.to_576534770_18085972597952532_4282588604881421897_n.jpg");
-  background-size: cover;
-  background-position: center;
+  height: 550px;
+  background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url("../Kumpulan foto/scholarship-hero.jpg") center/cover no-repeat;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 0 80px;
+  overflow: hidden;
 }
 
 .hero-content h1 {
@@ -95,7 +99,7 @@ body {
   font-size: 72px;
   font-weight: bold;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7);
   border-bottom: 4px solid white;
   padding-bottom: 10px;
   display: inline-block;

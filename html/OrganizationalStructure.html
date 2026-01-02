@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organizational Structure - Universitas Teknokrat Indonesia</title>
+    <link rel="stylesheet" type="text/css" href="../eksternal.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../organizational-structure-styles.css"
+    />
+    <link rel="icon" type="image/png" sizes="64x64" href="../ext/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav-horizontal">
+      <ul>
+        <li><a href="javascript:void(0)" onclick="home()">🏠 Home</a></li>
+        <li>
+          <a class="active" href="javascript:void(0)"
+            >👥 Organizational Structure</a
+          >
+        </li>
+        <li>
+          <a href="javascript:void(0)" onclick="profil()"
+            >👤 Vision & Mission</a
+          >
+        </li>
+        <li><a href="javascript:void(0)" onclick="cpl()">🎯 CPL</a></li>
+        <li><a href="javascript:void(0)" onclick="ppm()">💼 PPM</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="org-hero">
+      <div class="hero-text">
+        <h1>Organizational Structure</h1>
+        <p>
+          Program Studi Teknologi Informasi — Universitas Teknokrat Indonesia
+        </p>
+      </div>
+    </section>
+
+    <!-- Main -->
+    <div class="main-wrap">
+      <div class="card">
+        <div class="section-title">
+          <h2>Struktur Organisasi</h2>
+          <div class="underline"></div>
+        </div>
+        <div class="structure-wrap">
+          <!-- Gambar Struktur Organisasi -->
+          <figure class="poster-frame">
+            <img
+              id="structureImage"
+              class="structure-img"
+              src="../Kumpulan foto/Struktur-Manajemen-FTIK-UTI.jpg"
+              alt="Struktur Manajemen Fakultas Teknik & Ilmu Komputer Universitas Teknokrat Indonesia"
+            />
+            <figcaption class="poster-caption">Struktur Manajemen Fakultas Teknik dan Ilmu Komputer — UTI</figcaption>
+          </figure>
+          <div class="actions">
+            <a
+              class="btn btn-primary"
+              href="../Kumpulan foto/Struktur-Manajemen-FTIK-UTI.jpg"
+              target="_blank"
+              rel="noopener"
+              >Lihat Versi Besar</a
+            >
+            <a
+              class="btn btn-light"
+              download
+              href="../Kumpulan foto/Struktur-Manajemen-FTIK-UTI.jpg"
+              >Unduh Gambar</a
+            >
+          </div>
+          <div class="note">
+            Gambar mengikuti referensi:
+            teknologi-informasi.teknokrat.ac.id/organizational-structure
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zoom Overlay -->
+    <div class="zoom-overlay" id="zoomOverlay">
+      <button class="zoom-close" onclick="closeZoom()">×</button>
+      <img class="zoom-image" id="zoomImage" src="../Kumpulan foto/Struktur-Manajemen-FTIK-UTI.jpg" alt="Struktur Manajemen FTIK UTI" />
+    </div>
+
+    <script>
+      function home() {
+        location.href = "Home.html";
+      }
+      function profil() {
+        location.href = "Profil.html";
+      }
+      function cpl() {
+        location.href = "CPL.html";
+      }
+      function ppm() {
+        location.href = "PPM.html";
+      }
+
+      // Zoom handlers
+      const overlay = document.getElementById('zoomOverlay');
+      const zoomImage = document.getElementById('zoomImage');
+      const structureImage = document.getElementById('structureImage');
+      function openZoom(){ overlay.classList.add('open'); }
+      function closeZoom(){ overlay.classList.remove('open'); }
+      if(structureImage){ structureImage.addEventListener('click', openZoom); }
+      if(overlay){ overlay.addEventListener('click', function(e){ if(e.target===overlay){ closeZoom(); } }); }

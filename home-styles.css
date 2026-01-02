@@ -12,6 +12,66 @@ body {
   overflow-x: hidden;
 }
 
+/* ==================== TOP HEADER ==================== */
+.top-header {
+  background: white;
+  padding: 20px 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-logo {
+  width: 70px;
+  height: 70px;
+}
+
+.header-title h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.header-title p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0 0 0;
+}
+
+.header-contact {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.contact-icon {
+  font-size: 18px;
+}
+
 /* Hero Banner */
 .hero-banner {
   background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #1a365d 100%);
@@ -312,6 +372,134 @@ body {
   font-size: 14px;
 }
 
+/* ==================== QUICK ACCESS SECTION ==================== */
+.quick-access-section {
+  background: white;
+  padding: 60px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+
+.quick-access-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.quick-card {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  padding: 35px 25px;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.quick-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #38b2ac, #1e3a5f);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.quick-card:hover::before {
+  transform: scaleX(1);
+}
+
+.quick-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border-color: #38b2ac;
+}
+
+.quick-icon {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.quick-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 12px;
+}
+
+.quick-card p {
+  color: #718096;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ==================== CONTACT INFO SECTION ==================== */
+.contact-info-section {
+  background: white;
+  padding: 60px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.contact-box {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200px;
+  height: 200px;
+  background: rgba(56, 178, 172, 0.1);
+  border-radius: 50%;
+}
+
+.contact-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(30, 58, 95, 0.3);
+}
+
+.contact-icon-large {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.contact-box h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.contact-box p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 8px 0;
+}
+
 /* News Section */
 .news-section {
   background: white;
@@ -408,4 +596,230 @@ body {
   .section-title h2 {
     font-size: 28px;
   }
+}
+
+/* ==================== FOOTER SECTION ==================== */
+
+/* Footer Links Section */
+.footer-links {
+  background: linear-gradient(135deg, #5b8fc4 0%, #7ba3d1 50%, #9db8db 100%);
+  padding: 60px 50px 40px;
+  margin-top: 80px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-column h3 {
+  color: #2d3748;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  color: #2d3748;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  padding: 5px 0;
+}
+
+.footer-column ul li a:hover {
+  color: #1a202c;
+  transform: translateX(5px);
+  font-weight: 500;
+}
+
+/* Footer Copyright */
+.footer-copyright {
+  background: #2d3748;
+  padding: 25px 50px;
+  text-align: center;
+}
+
+.footer-copyright p {
+  color: #cbd5e0;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Scroll to Top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-top-btn:hover {
+  background: #1e3a8a;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(30, 64, 175, 0.6);
+}
+
+.scroll-top-btn:active {
+  transform: translateY(-2px);
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .footer-links {
+    padding: 50px 30px 30px;
+  }
+
+  .header-container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header-contact {
+    justify-content: center;
+  }
+
+  .quick-access-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-links {
+    padding: 40px 20px 30px;
+  }
+
+  .footer-copyright {
+    padding: 20px;
+  }
+
+  .footer-copyright p {
+    font-size: 12px;
+  }
+
+  .scroll-top-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .top-header {
+    padding: 15px 20px;
+  }
+
+  .logo-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-title h1 {
+    font-size: 18px;
+  }
+
+  .header-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text .subtitle {
+    font-size: 18px;
+  }
+
+  .quick-access-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-access-section,
+  .contact-info-section {
+    padding: 40px 20px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stat-card,
+.quick-card,
+.contact-box,
+.news-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hover Effect for Links */
+a {
+  transition: all 0.3s ease;
 }

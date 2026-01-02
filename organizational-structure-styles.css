@@ -1,0 +1,227 @@
+/* Organizational Structure Page Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f7f9fb;
+  color: #1f2937;
+}
+
+.nav-horizontal {
+  background: #1e3a5f;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.nav-horizontal ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.nav-horizontal li {
+  flex: 1;
+}
+.nav-horizontal a {
+  display: block;
+  padding: 14px 18px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+}
+.nav-horizontal a:hover {
+  background: #2a5298;
+  border-bottom-color: #ffd700;
+}
+.nav-horizontal a.active {
+  background: #2a5298;
+  border-bottom-color: #ffd700;
+}
+
+.org-hero {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 60%, #1a365d 100%);
+  overflow: hidden;
+}
+.org-hero::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  top: -80px;
+  width: 360px;
+  height: 360px;
+  background: rgba(255, 255, 255, 0.06);
+  transform: rotate(45deg);
+  border-radius: 24px;
+}
+.org-hero .hero-text {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+.org-hero h1 {
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.org-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.main-wrap {
+  max-width: 1200px;
+  margin: -40px auto 60px;
+  padding: 0 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  padding: 28px;
+}
+.section-title {
+  margin-bottom: 18px;
+  text-align: center;
+}
+.section-title h2 {
+  font-size: 28px;
+  color: #1e3a5f;
+  font-weight: 800;
+}
+.section-title .underline {
+  width: 96px;
+  height: 4px;
+  background: linear-gradient(90deg, #38b2ac, #1e3a5f);
+  margin: 10px auto 0;
+  border-radius: 4px;
+}
+
+.structure-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+.structure-img {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+/* Poster-like frame around the structure image */
+.poster-frame {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+}
+.poster-frame .structure-img {
+  border-radius: 10px;
+  box-shadow: none;
+  display: block;
+}
+.poster-caption {
+  text-align: center;
+  margin-top: 10px;
+  color: #374151;
+  font-size: 14px;
+}
+
+/* Zoom overlay for viewing full image */
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 20px;
+}
+.zoom-overlay.open {
+  display: flex;
+}
+.zoom-image {
+  max-width: 95vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+.zoom-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: #fff;
+  color: #111827;
+  border: none;
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 6px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-primary {
+  background: #1e3a5f;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(30, 58, 95, 0.35);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(30, 58, 95, 0.45);
+}
+.btn-light {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+.btn-light:hover {
+  transform: translateY(-2px);
+}
+
+.note {
+  text-align: center;
+  color: #4b5563;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .org-hero {
+    padding: 30px 20px;
+    min-height: 260px;
+  }
+  .org-hero h1 {
+    font-size: 32px;
+  }
+  .org-hero p {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,273 @@
+/* SDGs Page Styles - Universitas Teknokrat Indonesia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f9fa;
+  color: #1f2937;
+  overflow-x: hidden;
+}
+
+/* Navigation */
+.nav-horizontal {
+  background: #1e3a5f;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.nav-horizontal ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.nav-horizontal li {
+  flex: 1;
+}
+.nav-horizontal a {
+  display: block;
+  padding: 14px 18px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+.nav-horizontal a:hover {
+  background: #2a5298;
+  border-bottom-color: #ffd700;
+}
+.nav-horizontal a.active {
+  background: #2a5298;
+  border-bottom-color: #ffd700;
+}
+
+/* Hero Section */
+.sdgs-hero {
+  position: relative;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #1a365d 100%);
+  overflow: hidden;
+}
+.sdgs-hero::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+.sdgs-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 50%;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+.hero-content h1 {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.hero-content p {
+  font-size: 20px;
+  opacity: 0.95;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Main Container */
+.main-container {
+  max-width: 1200px;
+  margin: -60px auto 60px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Goals Grid Section */
+.goals-section {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  padding: 50px 40px;
+  margin-bottom: 40px;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-title h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1e3a5f;
+  margin-bottom: 15px;
+}
+.section-title .underline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #38b2ac, #1e3a5f);
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+.goal-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.goal-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+.goal-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.goal-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.7) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.goal-card:hover .goal-overlay {
+  opacity: 1;
+}
+.goal-overlay span {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Info Section */
+.info-section {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  padding: 50px 40px;
+}
+.info-content {
+  line-height: 1.8;
+  color: #4a5568;
+}
+.info-content h3 {
+  font-size: 24px;
+  color: #1e3a5f;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.info-content p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.info-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+.info-content ul li {
+  padding: 12px 0 12px 35px;
+  position: relative;
+}
+.info-content ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #38b2ac;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  margin-top: 40px;
+  padding: 40px;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+  border-radius: 16px;
+  color: #fff;
+}
+.cta-section h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.cta-section p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+.cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: #1e3a5f;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  background: #38b2ac;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sdgs-hero {
+    padding: 40px 20px;
+    min-height: 350px;
+  }
+  .hero-content h1 {
+    font-size: 36px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+  .goals-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+  }
+  .goals-section,
+  .info-section {
+    padding: 30px 20px;
+  }
+}

@@ -2,24 +2,73 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>
       Program Studi Teknologi Informasi - Universitas Teknokrat Indonesia
     </title>
     <!-- import file eksternal.css -->
-    <link rel="stylesheet" type="text/css" href="../eksternal.css" />
-    <link rel="stylesheet" type="text/css" href="../style-hero.css" />
-    <link rel="stylesheet" type="text/css" href="../home-styles.css" />
-    <!-- tag meta untuk responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../eksternal.css?v=1.0" />
+    <link rel="stylesheet" type="text/css" href="../style-hero.css?v=1.0" />
+    <link rel="stylesheet" type="text/css" href="../home-styles.css?v=1.0" />
     <!-- buat favicon -->
-    <link rel="icon" type="image/png" sizes="64x64" href="ext/logo.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="../ext/logo.png" />
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Critical CSS untuk memastikan tampilan dasar */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f8f9fa;
+      }
+    </style>
   </head>
   <body>
+    <script>
+      // Debug: Cek apakah CSS dimuat
+      window.addEventListener("load", function () {
+        console.log("Page loaded");
+        console.log("Stylesheets:", document.styleSheets.length);
+        for (let i = 0; i < document.styleSheets.length; i++) {
+          console.log(
+            "Stylesheet " + i + ":",
+            document.styleSheets[i].href || "inline"
+          );
+        }
+      });
+    </script>
+
+    <!-- Top Header with Logo and Quick Access -->
+    <header class="top-header">
+      <div class="header-container">
+        <div class="logo-section">
+          <img src="../ext/logo.png" alt="Logo UTI" class="header-logo" />
+          <div class="header-title">
+            <h1>Program Studi Teknologi Informasi</h1>
+            <p>Universitas Teknokrat Indonesia</p>
+          </div>
+        </div>
+        <div class="header-contact">
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <span>0721-702022</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <span>ti@teknokrat.ac.id</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <!-- buat area menu -->
     <nav class="nav-horizontal">
       <ul>
@@ -41,7 +90,9 @@
             <a href="javascript:void(0)" onclick="cpl()"
               >Capaian Pembelajaran Lulusan (CPL)</a
             >
-            <a href="javascript:void(0)">Organizational Structure</a>
+            <a href="javascript:void(0)" onclick="orgStructure()"
+              >Organizational Structure</a
+            >
           </div>
         </li>
         <li>
@@ -90,6 +141,9 @@
             💾 Download Files
           </a>
         </li>
+        <li>
+          <a href="javascript:void(0)" onclick="sdgs()"> 🌍 SDGs </a>
+        </li>
       </ul>
     </nav>
 
@@ -132,6 +186,44 @@
           <div class="icon">💼</div>
           <h3>Karir Cemerlang</h3>
           <p>Peluang karir luas di bidang IT dan teknologi informasi</p>
+        </div>
+      </div>
+
+      <!-- Quick Access Section -->
+      <div class="quick-access-section">
+        <div class="section-title">
+          <h2>Akses Cepat</h2>
+          <div class="underline"></div>
+        </div>
+        <div class="quick-access-grid">
+          <a href="javascript:void(0)" onclick="admission()" class="quick-card">
+            <div class="quick-icon">📝</div>
+            <h3>Pendaftaran</h3>
+            <p>Daftar sekarang dan jadilah bagian dari kami</p>
+          </a>
+          <a href="javascript:void(0)" onclick="academic()" class="quick-card">
+            <div class="quick-icon">📚</div>
+            <h3>Kurikulum</h3>
+            <p>Lihat struktur kurikulum program studi</p>
+          </a>
+          <a
+            href="javascript:void(0)"
+            onclick="scholarship()"
+            class="quick-card"
+          >
+            <div class="quick-icon">🎓</div>
+            <h3>Beasiswa</h3>
+            <p>Informasi beasiswa yang tersedia</p>
+          </a>
+          <a
+            href="javascript:void(0)"
+            onclick="downloadFiles()"
+            class="quick-card"
+          >
+            <div class="quick-icon">💾</div>
+            <h3>Download</h3>
+            <p>Unduh dokumen dan materi penting</p>
+          </a>
         </div>
       </div>
 
@@ -314,11 +406,39 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- buat area footer -->
-    <div class="footer">
-      <p>Copyright &copy; 2025 - Universitas Teknokrat Indonesia</p>
+      <!-- Contact Information Section -->
+      <div class="contact-info-section">
+        <div class="section-title">
+          <h2>Hubungi Kami</h2>
+          <div class="underline"></div>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-box">
+            <div class="contact-icon-large">📍</div>
+            <h3>Alamat</h3>
+            <p>Jl. ZA. Pagar Alam No.9-11, Labuhan Ratu, Bandar Lampung</p>
+          </div>
+          <div class="contact-box">
+            <div class="contact-icon-large">📞</div>
+            <h3>Telepon</h3>
+            <p>0721-702022</p>
+            <p>0721-787309</p>
+          </div>
+          <div class="contact-box">
+            <div class="contact-icon-large">✉️</div>
+            <h3>Email</h3>
+            <p>ti@teknokrat.ac.id</p>
+            <p>info@teknokrat.ac.id</p>
+          </div>
+          <div class="contact-box">
+            <div class="contact-icon-large">🌐</div>
+            <h3>Website</h3>
+            <p>www.teknokrat.ac.id</p>
+            <p>teknologi-informasi.teknokrat.ac.id</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- fungsi js -->
@@ -371,6 +491,143 @@
       function downloadFiles() {
         location.href = "DownloadFiles.html";
       }
+      // fungsi ke halaman organizational structure
+      function orgStructure() {
+        location.href = "OrganizationalStructure.html";
+      }
+      // fungsi ke halaman SDGs
+      function sdgs() {
+        location.href = "SDGs.html";
+      }
+
+      // Fungsi scroll to top
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      // Show/hide scroll button
+      window.addEventListener("scroll", function () {
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        if (window.pageYOffset > 300) {
+          scrollBtn.style.display = "flex";
+        } else {
+          scrollBtn.style.display = "none";
+        }
+      });
+
+      // Sidebar menu interaction
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuItems = document.querySelectorAll(".menu-item");
+        menuItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            menuItems.forEach((mi) => mi.classList.remove("active"));
+            this.classList.add("active");
+          });
+        });
+
+        // Add animation on scroll
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        document
+          .querySelectorAll(".stat-card, .quick-card, .news-card, .contact-box")
+          .forEach((el) => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(30px)";
+            el.style.transition = "all 0.6s ease-out";
+            observer.observe(el);
+          });
+      });
     </script>
+
+    <!-- Footer Links Section -->
+    <footer class="footer-links">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>🏛️ Tentang</h3>
+          <ul>
+            <li><a href="javascript:void(0)">🏛️ Tentang UTI</a></li>
+            <li>
+              <a href="javascript:void(0)">🏛️ Tentang Fakultas Teknik UTI</a>
+            </li>
+            <li><a href="javascript:void(0)">🎖️ Akreditasi UTI</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>📚 Layanan</h3>
+          <ul>
+            <li><a href="javascript:void(0)">💻 Perpustakaan UTI</a></li>
+            <li><a href="javascript:void(0)">💻 Kemahasiswaan UTI</a></li>
+            <li>
+              <a href="javascript:void(0)">💻 Sistem Informasi Akademik UTI</a>
+            </li>
+            <li><a href="javascript:void(0)">💻 Online Learning UTI</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>✅ Sistem</h3>
+          <ul>
+            <li><a href="javascript:void(0)">✅ e-Parent UTI</a></li>
+            <li><a href="javascript:void(0)">✅ e-Quality UTI</a></li>
+            <li><a href="javascript:void(0)">✅ e-Peminjaman UTI</a></li>
+            <li><a href="javascript:void(0)">✅ e-Certificate UTI</a></li>
+            <li><a href="javascript:void(0)">✅ e-Journal UTI</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>📱 Social Media</h3>
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/" target="_blank"
+                >📷 Instagram Teknologi Informasi</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" target="_blank"
+                >📷 Instagram Fakultas Teknik UTI</a
+              >
+            </li>
+            <li>
+              <a href="https://www.facebook.com/" target="_blank"
+                >📘 Facebook Teknologi Informasi</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer Copyright -->
+    <footer class="footer-copyright">
+      <p>
+        © Copyright 2026 - Program Studi S1 Teknologi Informasi | All Rights
+        Reserved.
+      </p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button
+      id="scrollTopBtn"
+      class="scroll-top-btn"
+      onclick="scrollToTop()"
+      title="Kembali ke atas"
+    >
+      ↑
+    </button>
   </body>
 </html>
